@@ -63,3 +63,17 @@ RFC 8058), enviado por el SMTP de Hostalia. Desplegado en `/volume1/web/newslett
 
 > 🔐 No subir credenciales ni configuraciones sensibles a este repo (`.env` está en `.gitignore`).
 
+
+## Herramientas
+
+- [Roundcube](https://roundcube.net/) — webmail.
+- [Docker](https://www.docker.com/) — contenedores.
+- [MariaDB](https://mariadb.org/) — base de datos.
+- [Apache HTTP Server](https://httpd.apache.org/) y [PHP](https://www.php.net/) — servidor web.
+- [Cloudflare](https://www.cloudflare.com/) — DNS y proxy.
+- [Synology DSM](https://www.synology.com/dsm) — reverse proxy y alojamiento.
+
+## Mantenimiento automático
+
+Este repositorio es revisado **cada noche** por agentes automáticos que buscan bugs en el código. Por ello, entre las **03:00** y las **05:00** es probable que no todo funcione correctamente.
+
