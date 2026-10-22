@@ -73,7 +73,3 @@ RFC 8058), enviado por el SMTP de Hostalia. Desplegado en `/volume1/web/newslett
 - [Cloudflare](https://www.cloudflare.com/) — DNS y proxy.
 - [Synology DSM](https://www.synology.com/dsm) — reverse proxy y alojamiento.
 
-## Mantenimiento automático
-
-Este repositorio es revisado **cada noche** por agentes automáticos que buscan bugs en el código. Por ello, entre las **03:00** y las **05:00** es probable que no todo funcione correctamente.
-
