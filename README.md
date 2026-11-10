@@ -1,8 +1,17 @@
 # Correo — webmail de Lebeche (Roundcube en Docker)
 
-> Estado (2026-09-16): ✅ **funcionando** — Roundcube desplegado en el NAS vía Docker
-> (Container Manager). Es solo la **interfaz web**: los buzones y el MX siguen en **Hostalia**.
-> Se publica en `https://webmail.corrientelebeche.es/` y `https://correo.corrientelebeche.es/`.
+> Estado (2026-11-10): ⏸️ **RETIRADO** — sustituido por **Nextcloud Mail** (`https://nube.corrientelebeche.es`).
+> El contenedor Roundcube quedó **parado** (`restart no`; imagen y datos conservados para rollback)
+> y la regla de proxy inverso «Mail Hostalia» fue **eliminada** de DSM. La cuenta
+> `monderas@corrientelebeche.es` está configurada directamente en la app **Correo** de Nextcloud
+> (IMAP `imap.dominioabsoluto.net:993` SSL · SMTP `smtp.dominioabsoluto.net:587` TLS).
+> Rollback: `docker update --restart unless-stopped roundcube && docker start roundcube`
+> + recrear la regla de proxy (ver `DEPLOY_ROUNDCUBE.md`).
+>
+> Estado anterior (2026-09-16): ✅ funcionando — Roundcube desplegado en el NAS vía Docker
+> (Container Manager). Era solo la **interfaz web**: los buzones y el MX siguen en **Hostalia**.
+> Se publicaba en `https://webmail.corrientelebeche.es/` y `https://correo.corrientelebeche.es/`.
+
 
 ## Arquitectura
 
