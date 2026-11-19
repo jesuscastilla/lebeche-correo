@@ -37,8 +37,8 @@
 
 ## DNS (Cloudflare)
 
-- `CNAME webmail → pelotxo.synology.me` 🟠 **Proxied**.
-- `CNAME correo → pelotxo.synology.me` 🟠 **Proxied**.
+- `CNAME webmail → tu-servidor-ddns.ejemplo.com` 🟠 **Proxied**.
+- `CNAME correo → tu-servidor-ddns.ejemplo.com` 🟠 **Proxied**.
 
 ## Reverse Proxy (DSM)
 
