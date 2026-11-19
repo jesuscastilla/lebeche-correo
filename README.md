@@ -21,7 +21,7 @@
   (⚠️ hay que usar los hostnames del **proveedor**, no `…corrientelebeche.es`: el certificado TLS
   del servidor es para `*.dominioabsoluto.net`. El puerto 465 está cerrado → 587 + STARTTLS).
 - **Publicación:** subdominios `webmail` y `correo` → Reverse Proxy de DSM → `localhost:8090`.
-- **Volúmenes:** `/volume2/docker/roundcube/{html,config,temp}`.
+- **Volúmenes:** `/volume1/docker/roundcube/{html,config,temp}`.
 - **Contactos:** 66 importados desde Synology Contacts (PostgreSQL `synocontacts` → vCard → Roundcube).
 
 ## Ficheros del repo
