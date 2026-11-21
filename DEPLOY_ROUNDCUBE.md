@@ -17,9 +17,9 @@ Cliente → https://webmail.corrientelebeche.es/   (Cloudflare Proxied, cert Uni
 
 | Qué | Dónde |
 |---|---|
-| Proyecto Docker | `/volume1/docker/roundcube/` |
-| `compose.yaml` | `/volume1/docker/roundcube/compose.yaml` |
-| Secretos (`.env`) | `/volume1/docker/roundcube/.env` (chmod 600, NO en git) |
+| Proyecto Docker | `/volume1/stacks/roundcube/` |
+| `compose.yaml` | `/volume1/stacks/roundcube/compose.yaml` |
+| Secretos (`.env`) | `/volume1/stacks/roundcube/.env` (chmod 600, NO en git) |
 | Volúmenes | `./html` (docroot), `./config` (config extra), `./temp` (sesiones) |
 | BD | MariaDB10 del NAS, base `roundcube`, usuario `roundcube` |
 
@@ -57,19 +57,19 @@ CNAME  correo   pelotxo.synology.me  🟠 Proxied
 
 ```bash
 # estado
-sudo /usr/local/bin/docker compose -f /volume1/docker/roundcube/compose.yaml ps
+sudo /usr/local/bin/docker compose -f /volume1/stacks/roundcube/compose.yaml ps
 
 # logs
 sudo /usr/local/bin/docker logs -f roundcube
 
 # reiniciar
-cd /volume1/docker/roundcube && sudo /usr/local/bin/docker compose restart
+cd /volume1/stacks/roundcube && sudo /usr/local/bin/docker compose restart
 
 # actualizar imagen
-cd /volume1/docker/roundcube && sudo /usr/local/bin/docker compose up -d --pull always
+cd /volume1/stacks/roundcube && sudo /usr/local/bin/docker compose up -d --pull always
 
 # backup de la BD
-/usr/local/mariadb10/bin/mysqldump -u root -p roundcube > /volume1/docker/roundcube/backup-roundcube.sql
+/usr/local/mariadb10/bin/mysqldump -u root -p roundcube > /volume1/stacks/roundcube/backup-roundcube.sql
 ```
 
 ## Autenticación de correo (SPF / DKIM / DMARC) — ✅ configurado
